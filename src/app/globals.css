@@ -19,4 +19,19 @@
     }
 
   }
+
+  .usuarios-view {
+    @apply bg-slate-500 text-neutral-950;
+
+    & ul{
+      @apply block
+    }
+      & li{
+        @apply xl:p-5 sm:p-2 md:p-3 outline
+      }
+  }
+
+  .FAI {
+    @apply fa-camera fa-xs
+  }
 } 
