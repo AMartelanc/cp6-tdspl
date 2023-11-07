@@ -1,8 +1,9 @@
 import { redirect } from "next/navigation";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faRandom } from '@fortawesome/free-solid-svg-icons'
+import Link from "next/link";
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+//import { faRandom } from '@fortawesome/free-solid-svg-icons'
 
-// <a href="/"> <FontAwesomeIcon icon={faRandom}/> </a>
+// <a href=""> <FontAwesomeIcon icon={faRandom}/> </a>
 
 export default async function GetAllUsers() {
         
@@ -19,7 +20,7 @@ export default async function GetAllUsers() {
                                                         usuarios.usuarios.map((usuario) => (
                                                                 <li key={usuario.id}>
                                                                         <p>{usuario.id}</p>
-                                                                        <p>{usuario.name}</p>
+                                                                        <p><Link href={`/get-by-id/view/${usuario.id}`}>{usuario.name}</Link></p>
                                                                         <p>{usuario.email}</p>
                                                                         <p>{usuario.text}</p>
 
